@@ -33,48 +33,48 @@ The client sits in its own separate network rather than the server's, so the con
 ## Steps
 
 1. Created the server VM and its own virtual network in Azure
-![VNet and subnet configuration](screenshots/01-vnet-subnet-config.png)
+![VNet and subnet configuration](Screenshots/01-vnet-subnet-config.png)
 
 2. Installed the Remote Access role with the DirectAccess and VPN (RAS) role service
-![Remote Access role service selection](screenshots/02-remote-access-role-services.png)
+![Remote Access role service selection](Screenshots/02-remote-access-role-services.png)
 
 3. Configured RRAS for VPN access using a custom configuration
-![RRAS VPN access configuration](screenshots/03-rras-vpn-access-config.png)
+![RRAS VPN access configuration](Screenshots/03-rras-vpn-access-config.png)
 
 4. Set up a static IP address pool to hand out addresses to connecting clients
-![Static IP address pool](screenshots/04-static-ip-pool.png)
+![Static IP address pool](Screenshots/04-static-ip-pool.png)
 
 5. Created a dedicated user account with dial-in permission, separate from any administrator account
-![vpnclient dial-in permission](screenshots/05-vpnclient-dialin-permission.png)
+![vpnclient dial-in permission](Screenshots/05-vpnclient-dialin-permission.png)
 
 6. Opened the required inbound port (TCP 443) on the network security group
-![NSG inbound rules](screenshots/06-nsg-inbound-rules.png)
+![NSG inbound rules](Screenshots/06-nsg-inbound-rules.png)
 
 7. Confirmed the server VM's specs and public IP
-![vm-vpnserver overview](screenshots/07-vm-vpnserver-overview.png)
+![vm-vpnserver overview](Screenshots/07-vm-vpnserver-overview.png)
 
 8. Created a self signed certificate on the server and bound it to the SSTP listener
 9. Built a separate client VM in its own network to represent a remote employee's device
 10. Configured a VPN connection on the client using SSTP and the server's public IP
-![Client VPN connection settings](screenshots/08-client-vpn-connection-settings.png)
+![Client VPN connection settings](Screenshots/08-client-vpn-connection-settings.png)
 
 11. Hit a certificate trust error on first connection attempt
-![Certificate trust error](screenshots/09-certificate-trust-error.png)
+![Certificate trust error](Screenshots/09-certificate-trust-error.png)
 
 12. Exported the server's certificate and imported it into the client's trusted root store
-![Trusted root certificate imported](screenshots/10-trusted-root-cert-imported.png)
+![Trusted root certificate imported](Screenshots/10-trusted-root-cert-imported.png)
 
 13. Connected the VPN successfully
-![Client VPN connected status](screenshots/11-client-vpn-connected-status.png)
+![Client VPN connected status](Screenshots/11-client-vpn-connected-status.png)
 
 14. Confirmed the client received an address from the configured pool
-![Client ipconfig showing VPN IP](screenshots/12-client-ipconfig-vpn-ip.png)
+![Client ipconfig showing VPN IP](Screenshots/12-client-ipconfig-vpn-ip.png)
 
 15. Verified connectivity with a successful ping to the server's internal address
-![Successful ping](screenshots/13-successful-ping.png)
+![Successful ping](Screenshots/13-successful-ping.png)
 
 16. Verified the route with a traceroute through the tunnel
-![Tracert results](screenshots/14-tracert-results.png)
+![Tracert results](Screenshots/14-tracert-results.png)
 
 ## Troubleshooting Notes
 
