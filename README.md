@@ -39,7 +39,9 @@ The client sits in its own separate network rather than the server's, so the con
 ![Remote Access role service selection](Screenshots/02-remote-access-role-services.png)
 
 3. Configured RRAS for VPN access using a custom configuration
+
 ![RRAS VPN access configuration](Screenshots/03-rras-vpn-access-config.png)
+
 
 4. Set up a static IP address pool to hand out addresses to connecting clients
 ![Static IP address pool](Screenshots/04-static-ip-pool.png)
